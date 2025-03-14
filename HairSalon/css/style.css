@@ -154,7 +154,7 @@ nav h1{
 /* MAIN
 /*******************************************/
 .service{
-     background-image: url(/Portfolio/HairSalon/images/colorful_hair.png);
+     background-image: url(../images/colorful_hair.png);
      background-repeat: no-repeat;
      background-size: contain;
 }
@@ -261,7 +261,7 @@ nav h1{
      margin: 0 auto;
      height: 20rem;
      width: 100%;
-     background-image: url(/Portfolio/HairSalon/images/video.jpg);
+     background-image: url(../images/video.jpg);
      background-repeat: no-repeat;
      background-size: contain;
      background-position: center;
