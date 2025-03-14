@@ -135,16 +135,13 @@ main{
      background: rgb(92, 23, 23);
      color:rgb(245, 222, 179);
      padding: 2rem 0;
-     background-image: cross-fade(url(/Restaurant/images/mainbbq.jpg), url(/Restaurant/images/Black.png), 65%);
-     background-image: -webkit-cross-fade(url(/Restaurant/images/mainbbq.jpg),url(/Restaurant/images/mainbbq.jpg), 65%);
+     background-image: cross-fade(url(../images/mainbbq.jpg), url(../images/Black.png), 65%);
+     background-image: -webkit-cross-fade(url(../images/mainbbq.jpg),url(../images/Black.png), 65%);
      background-size: cover;
      background-repeat: no-repeat;
      border-bottom:2px solid rgb(245, 222, 179);
 }
 main h1{
-	background-image: url(/images/mainbbq.jpg);
-	background-image: url(./images/mainbbq.jpg);
-	background-image: url(../images/mainbbq.jpg);
      font-size: 3rem;
      width: 75%;
      margin: 0 auto;
@@ -333,30 +330,30 @@ li:hover .hide{
 }
 .burgers{
      height: 25rem;
-     background-image: cross-fade(url(/Portfolio/Restaurant/images/burgerfries.webp), url(/Portfolio/Restaurant/images/Black.png),  25%); 
-     background-image: -webkit-cross-fade(url(/Portfolio/Restaurant/images/burgerfries.webp), url(/Portfolio/Restaurant/images/Black.png), 25%);
+     background-image: cross-fade(url(../images/burgerfries.webp), url(../images/Black.png),  25%); 
+     background-image: -webkit-cross-fade(url(../images/burgerfries.webp), url(../images/Black.png), 25%);
      background-size: cover;
      background-position: 50% 0;
 }
 .ribs{
      height: 25rem;
-     background-image: cross-fade(url(/Portfolio/Restaurant/images/ribsonionrings.jpg), url(/Portfolio/Restaurant/images/Black.png), 25%);
-     background-image: -webkit-cross-fade(url(/Portfolio/Restaurant/images/ribsonionrings.jpg), url(/Portfolio/Restaurant/images/Black.png), 25%);
+     background-image: cross-fade(url(../images/ribsonionrings.jpg), url(../images/Black.png), 25%);
+     background-image: -webkit-cross-fade(url(../images/ribsonionrings.jpg), url(../images/Black.png), 25%);
      background-size: cover;
      background-repeat: no-repeat;
      background-position: 50% 50%;
 }
 .salads{
      height: 25rem;
-     background-image: cross-fade(url(/Portfolio/Restaurant/images/salad2.jpg), url(/Portfolio/Restaurant/images/Black.png), 25%);
-     background-image: -webkit-cross-fade(url(/Portfolio/Restaurant/images/salad2.jpg), url(/Portfolio/Restaurant/images/Black.png), 25%);
+     background-image: cross-fade(url(../images/salad2.jpg), url(../images/Black.png), 25%);
+     background-image: -webkit-cross-fade(url(../images/salad2.jpg), url(../images/Black.png), 25%);
      background-size: cover;
      background-position: 50%, 0;
 }
 .steaks{
      height: 25rem;
-     background-image: cross-fade(url(/Portfolio/Restaurant/images/Beef-and-broccoli.jpg), url(/Portfolio/Restaurant/images/Black.png), 25%);
-     background-image: -webkit-cross-fade(url(/Portfolio/Restaurant/images/Beef-and-broccoli.jpg), url(/Portfolio/Restaurant/images/Black.png), 25%);
+     background-image: cross-fade(url(../images/Beef-and-broccoli.jpg), url(../images/Black.png), 25%);
+     background-image: -webkit-cross-fade(url(../images/Beef-and-broccoli.jpg), url(../images/Black.png), 25%);
      background-size: cover;
      background-position: 50% 0;
 }
@@ -428,8 +425,8 @@ li:hover .hide{
      justify-content: center;
      align-items: center;
      align-self: center;
-     background-image: cross-fade(url(/Portfolio/Restaurant/images/BBQ-Platters.jpg), url(/Portfolio/Restaurant/images/Black.png), 25%);
-     background-image: -webkit-cross-fade(url(/Portfolio/Restaurant/images/BBQ-Platters.jpg), url(/Portfolio/Restaurant/images/Black.png), 25%);
+     background-image: cross-fade(url(../images/BBQ-Platters.jpg), url(../images/Black.png), 25%);
+     background-image: -webkit-cross-fade(url(..images/BBQ-Platters.jpg), url(../images/Black.png), 25%);
      background-size: cover;
      background-repeat: no-repeat;
      border-radius: 2rem;
@@ -525,8 +522,8 @@ width: 6rem;
           background-position: right;
           background-size: 50%;
           align-items: flex-start;
-          background-image: cross-fade(url(/Portfolio/Restaurant/images/mainbbq.jpg), url(/Portfolio/Restaurant/images/Black.png), 0%);
-          background-image: -webkit-cross-fade(url(/Portfolio/Restaurant/images/mainbbq.jpg),url(/Portfolio/Restaurant/images/Black.png), 0%);
+          background-image: cross-fade(url(../images/mainbbq.jpg), url(../images/Black.png), 0%);
+          background-image: -webkit-cross-fade(url(../images/mainbbq.jpg),url(../images/Black.png), 0%);
      }
      main h1{
           font-size: 6rem;
