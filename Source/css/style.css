@@ -1,0 +1,379 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* COLOR
+Background- rgba(245,249,252,255)
+Button- rgba(48,70,89,255)
+/*******************************************/
+body{
+     color: rgb(44, 68, 89);
+}
+
+
+/******************************************
+/* BUTTON
+/*******************************************/
+     button{
+          width: 6rem;
+          height: 2rem;
+          align-items: center;
+          justify-content: center;
+          color: rgb(255, 255, 255);
+          background: rgb(44, 68, 89);
+          border: none;
+     }
+     .button:hover{
+          background: rgb(150, 150, 150);
+          color: rgb(44, 68, 89);
+     }
+/******************************************
+/* HOVER
+/*******************************************/
+     body a:hover{
+          color:rgb(150, 150, 150)
+     }
+
+/******************************************
+/* HEADER
+/*******************************************/
+     header{
+          background: rgba(245,249,252,255);
+          padding: 3rem 0;
+     }
+     nav{
+          display: flex;
+          justify-content: space-evenly;
+          flex-direction: row;
+          padding: .5rem 2rem;
+          height: 8rem;
+          border-bottom: 2px solid rgb(44, 68, 89);
+     }
+     .navbar{
+          width: 100%;
+          height: 60px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+     }
+     .Name{
+          font-size: 3rem;
+     }
+     .primary-nav{
+          display:flex;
+          flex-direction: row;
+     }
+     .primary-nav li{
+          padding: 0 2rem;
+          font-weight: bold;
+          flex-wrap: wrap;
+     }
+     header span{
+          font-size: 1.5rem;
+     }
+     header a{
+          color: rgb(44, 68, 89);
+          text-decoration: none;
+          font-size: 1.5rem;
+          font-weight: 400;
+     }
+     .toggle_btn{
+          font-size: 2rem;
+     }
+/******************************************
+/* Dropdown Menu
+/*******************************************/
+     .dropdown_menu{
+          display: none;
+          position: absolute;
+          right: 0;
+          top:7rem;
+          width: 95%;;
+          height: 0;
+          background: rgb(44, 68, 89);
+          backdrop-filter: blur(15px);
+          border-radius: 15px;
+          overflow: hidden;
+          transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          align-content: center;
+     }
+     .dropdown_menu.open{
+          height: fit-content;
+     }
+     .dropdown_menu li{
+          padding: .5rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;;
+     }
+     .dropdown_menu a{
+          font-size: 2rem;
+          text-align: center;
+          color:rgb(219, 219, 219);
+          padding: 2rem;
+          width: 35rem;
+     }
+     .dropdown_menu a:hover{
+          color:rgb(150, 150, 150);
+          background: rgba(245,249,252,255);
+          font-size: 3.5rem;
+          transition: scale .2;
+     }
+/******************************************
+/* TOP
+/*******************************************/
+     .top-Row {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          Background: rgba(245,249,252,255);
+          padding-top:2rem; 
+      }
+      .Tagline{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 0 2rem;
+      }
+     .Tagline span{
+          font-size: 1rem;
+          color: rgb(150, 150, 150);
+     }
+      .Tagline h1{
+          font-size: 2rem;
+          padding: 2rem 0;
+      }
+      .Tagline div{
+          display: flex;
+          flex-direction: column;
+      }
+      .Tagline input{
+          text-align: center;
+          font-size: 1.5rem;
+          height: 2rem;
+          width: 100%;
+          background: rgb(219, 219, 219);
+          padding-left: 1rem;
+          border: none;
+      }
+      .Tagline button{
+          font-size: 1.5rem;
+          height: 2rem;
+          width: 100%;
+          margin: 1rem 0;
+      }
+      .Tagline p{
+          font-size: 1rem;
+          padding: 1.5rem 0;
+      }
+      .top-Row img {
+          margin-top: 5rem;
+          width: 425px;
+      }
+     
+/******************************************
+/* MIDDLE
+/*******************************************/
+     .middle-Row{
+          background: rgba(245,249,252,255);
+          padding: 4rem 2rem;
+     }
+     .middle-Row ul{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          justify-self: flex-start;
+          justify-items: flex-start;
+          align-items: flex-start;
+          align-self: flex-start;
+     }
+     .middle-Row li{
+          padding: 1rem 0rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+     }
+     .middle-Row span, 
+     .middle-Row p{
+          font-size: 1rem;
+     }
+     .middle-Row span{
+          font-weight: 600;
+     }
+     .middle-Row p{
+          padding: 1rem 0;
+     }
+     .middle-Row .fa-solid{
+          font-size: 1rem;
+          font-weight: 600;
+          margin: 0;
+          padding: 1rem 0;
+     }
+     .middle-Row .fa-angle-right{
+          padding: 0 0 0 1rem;
+     }
+     .middle-Row a{
+          font-weight: 600;
+          font-size: 1rem;
+          text-decoration: none;
+          color: rgb(44, 68, 89);
+     }
+/******************************************
+/* BOTTOM
+/*******************************************/
+     .bottom-Row{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-self: center;
+          padding: 5rem 2rem;
+          margin: 0 auto;
+
+     }
+     .problems h1{
+          font-size: 2rem;
+          font-weight: 600;
+          padding-bottom: 2rem;
+          width: 100%;
+     }
+     .problems p{
+          font-size: 1rem;
+          width: 100%;
+     }
+     .block{
+          background: rgba(245,249,252,255);
+          height: 15rem;
+          width: 100%;
+          margin: 0 auto;
+     }
+/******************************************
+/* FONT SIZE
+/*******************************************/
+ 
+/******************************************
+/* MEDIA QUERIES 640px
+/*******************************************/
+@media (max-width: 1080px){
+     .primary-nav, .info{
+          display: none;
+     }
+     .dropdown_menu{
+          display: block;
+     }
+}
+@media (min-width: 1300px) {
+     .top-Row img{
+          width: 925px;
+     }
+}
+@media (min-width: 1080px) {
+     /* Header */
+     .navbar{
+          padding: 0 2rem;
+     }
+     .toggle_btn{
+          display: none;
+     }
+     /* Top Row */
+     .top-Row {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: nowrap;
+          width: 100%;
+      }
+      .top-Row img{
+          width: 100%;
+          display: flex;
+          justify-self: flex-end;
+      }
+      .top-Row .search{
+          flex-direction: row;
+          align-items: center;
+          color: red;
+      }
+      .Tagline{
+          padding-left: 15rem;
+      }
+      .Tagline span{
+          font-size: 1.5rem;
+      }
+      .Tagline h1{
+          font-size: 3rem;
+      }
+      .Tagline p{
+          font-size: 1.5rem;
+      }
+      .Tagline input{
+          width: 20rem;
+          height: 3rem;
+          font-size: 2rem;
+      }
+      .Tagline button{
+          width: 6rem;
+          height: 3rem;
+          font-size: 1rem;
+      }
+      /* Middle Row */
+      .middle-Row ul{
+          flex-direction: row;
+          justify-self: center;
+          font-size: 2rem;
+          width: 75%;
+      }
+      .middle-Row li{
+          padding: 0;
+          width: 20%;
+          margin: 0 auto;
+      }
+      .middle-Row span,
+      .middle-Row a{
+          padding: 1rem 0;
+          font-size: 1.2rem;
+      }
+
+      .middle-Row p{
+          font-size: 1rem;
+          padding: 0rem 2rem 0rem 0;
+          height: 5rem;
+      }
+      .middle-Row .Links li > i{
+          font-size: 1.5rem;
+          margin: 0;
+      }
+      .middle-Row .fa-angle-right{
+           font-size: 1rem;
+      }
+      /* Bottom Row */
+      .bottom-Row{
+          width: 100%;
+          padding: 10rem 8rem;
+          align-items: flex-start;
+      }
+      .bottom-Row h1{
+          font-size: 3rem;
+      }
+      .block{
+          margin-top:2rem;
+          width: 100%;
+          height: 25rem;
+      }
+
+}

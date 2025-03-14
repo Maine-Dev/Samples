@@ -1,0 +1,600 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+/* LIGHT BROWN rgb(245, 222, 179); */ 
+/* RUBY RED rgb(92, 23, 23); */
+/* DARK BROWN rgb(94,55,24*/
+
+
+/******************************************
+/* BODY
+/*******************************************/
+body{
+     text-align: center;
+}
+/******************************************
+/* HEADER
+/*******************************************/
+nav{
+     padding: 2rem 2rem;
+}
+nav h1{
+     font-size: 2rem;
+     color: rgb(245, 222, 179);
+}
+.navbar a{
+     text-decoration: none;
+}
+.navbar {     
+     background: rgb(92, 23, 23);
+     display: flex;
+     justify-content: space-between;
+     padding: 2rem;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1;
+     height: 5rem;
+     width: 100%;
+     border-bottom: 2px solid rgb(245, 222, 179);
+}
+.menu__box{
+     display: flex;
+     align-content: center;
+     align-self: center;
+     visibility: hidden;
+     height: fit-content;
+
+}
+.menu__box li{
+     display: none;
+}
+.menu__box li:hover{
+     transform: scale(1.2);
+     text-shadow: 3px 1px .5px rgb(92, 23, 23);
+}
+.dropdown__menu{
+     font-size: 2rem;
+     visibility: hidden;
+     position: fixed;
+     right: 0;
+     top: 5rem;
+     height: 0;
+     width: 100%;
+     background: rgb(95, 55, 24);
+     backdrop-filter: blur(15px);
+     border-radius: 2rem;
+     border: 2px solid rgb(245, 222, 179);
+     overflow: hidden;
+     opacity: 0;
+     transition: height .8s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+     opacity 1s ease-in-out, 
+     visibility 1.2s ease-in-out;
+}
+.dropdown__menu.open{
+     visibility: visible;
+     height: 550px;
+     opacity: 1;
+     display: block;     
+     transition: height 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+}
+.dropdown__menu li{
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     padding: 1rem 0;
+}
+.dropdown__menu a{
+     text-decoration: none;
+}
+.dropdown__menu li a:hover{
+     transform: scale(1.1);
+     text-shadow: 3px 1px .5px rgb(92, 23, 23);
+}
+nav li a{
+     color: rgb(245, 222, 179)
+}
+
+/******************************************
+/* Toggle Nav
+/*******************************************/
+
+.toggle_btn{
+     font-size: 2rem;
+     color: rgb(245, 222, 179);
+     position: relative;
+     right: 1rem;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+     /* MAIN */
+
+main{
+     background: rgb(92, 23, 23);
+     color:rgb(245, 222, 179);
+     padding: 2rem 0;
+     background-image: cross-fade(url(/Portfolio/Rcopy/images/mainbbq.jpg), url(/Portfolio/Rcopy/images/Black.png), 65%);
+     background-image: -webkit-cross-fade(url(/Portfolio/Rcopy/images/mainbbq.jpg),url(/Portfolio/Rcopy/images/Black.png), 65%);
+     background-size: cover;
+     background-repeat: no-repeat;
+     border-bottom:2px solid rgb(245, 222, 179);
+}
+main h1{
+     font-size: 3rem;
+     width: 75%;
+     margin: 0 auto;
+     padding: 4rem 0;
+     text-shadow: 2px black;
+}
+main ::placeholder{
+     color: rgb(245, 222, 179);
+}
+main input{
+     text-align: center;
+     font-size: 1.5rem;
+     width: 100%;
+     height: 2rem;
+     background: rgb(95, 55, 24);
+     color: rgb(245, 222, 179);
+     border: 2px solid rgb(245, 222, 179);
+     margin: 2rem 0
+}
+.enter{
+     font-size: 1.5rem;
+     width: 100%;
+     height: 2rem;
+     background: rgb(245, 222, 179);
+     color: rgb(92, 23, 23);
+     border: 2px solid rgb(95, 55, 24);
+}
+.enter:hover{
+     color: rgb(245, 222, 179);
+     background: rgb(95, 55, 24);
+     border: 2px solid rgb(245, 222, 179);
+}
+main div{
+     padding: 4rem;
+}
+main div a{
+     font-size: 1.5rem;
+     padding: 0 1rem;
+     color: rgb(245, 222, 179);
+}
+main span a:hover{
+     opacity: 75%;
+}
+
+     /*  SECOND ROW*/
+
+.second-Row{
+     background: rgb(95, 55, 24);
+     color: rgb(245, 222, 179);
+     padding: 2rem 0;
+     border-bottom: 2px solid rgb(245, 222, 179);
+}
+.second-Row > span{
+     font-size: 1rem;
+}
+.second-Row h2{
+     font-size: 2rem;
+     padding: 2rem 0;
+}
+.second-Row p{
+     font-size: 1rem;
+     padding: 1rem 1.5rem;
+
+}
+.guide{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-top: 4rem;
+}
+.guide span{
+     align-content: center;
+     font-size: 1rem;
+     font-weight: bold;
+     background: rgb(92, 23, 23);
+     height: 3rem;
+     width: 10rem;
+     padding: 0 1rem;
+     border: 2px solid rgb(245, 222, 179);
+     border-radius: 2rem 0 0 2rem;
+}
+.icons{
+     font-size: 1rem;
+     height: 3rem;
+     width: 3rem;
+     background: rgb(92, 23, 23);
+     color: rgb(245, 222, 179);
+     border: 2px solid rgb(245, 222, 179);
+     border-radius: 0 2rem 2rem 0;
+}
+.icons:hover{
+     background: rgb(245, 222, 179);
+     color: rgb(92, 23, 23);
+}
+
+     /* THIRD ROW */
+.third-Row{
+     background:rgb(95, 55, 24);
+     color: rgb(245, 222, 179);
+     padding: 4rem 0;
+     border-bottom: 2px solid rgb(245, 222, 179);
+}
+.third-Row h2{
+     font-size: 1.5rem;
+     padding: 2rem 0;
+}
+.meals{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+.meals li {
+     padding: 1rem 2rem;
+     border-bottom: 2px solid rgb(245, 222, 179);
+}
+.meals a{
+     color: rgb(245, 222, 179);
+     font-size: 1.5rem;
+     text-decoration: none;
+}
+.meals a:hover{
+     color: rgb(92, 23, 23);
+}
+.menus ul{
+     display: flex;
+     flex-direction: column;
+}
+.menus li{
+     display: flex;
+     flex-direction: column;
+     align-self: center;
+     border-radius: 2rem;;
+     border: 2px solid rgb(92, 23, 23);
+     width: 75%;
+     padding: 2rem 0;
+     margin: 2rem 0;
+     border-right: 2px solid rgb(245, 222, 179);
+     border-bottom: 2px solid rgb(245, 222, 179);
+}
+.hide{
+     text-align: left;
+     padding: 0 2rem;
+     visibility: hidden;
+     opacity: 0;
+     transition: visibility 0s, opacity 0.3s ease-in-out;
+   }
+   
+li:hover .hide{
+     visibility: visible;
+     opacity: 1;
+     backdrop-filter: blur(5px);
+
+   }
+
+.cost{
+     margin: 8rem 0 0 0;
+     font-size: 2rem;
+     width: fit-content;
+}
+.stars{
+     width: 12rem;
+     margin: .5rem 0;
+}
+.plate{
+     font-size: 2rem;
+     height: 2rem;
+     width: fit-content;
+
+     margin: .5rem 0 1rem 0;
+}
+.menus button{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2rem;
+     width: 16rem;
+     margin: 3rem 0 2rem 2rem;
+     background: rgb(245, 222, 179);
+     color: rgb(92, 23, 23);
+     border-radius: 1rem;
+}
+.menus button:hover{
+     background:rgb(92, 23, 23);
+     color: rgb(245, 222, 179);
+}
+.burgers{
+     height: 25rem;
+     background-image: cross-fade(url(/Portfolio/Rcopy/images/burgerfries.webp), url(/Portfolio/Rcopy/images/Black.png),  25%); 
+     background-image: -webkit-cross-fade(url(/Portfolio/Rcopy/images/burgerfries.webp), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-size: cover;
+     background-position: 50% 0;
+}
+.ribs{
+     height: 25rem;
+     background-image: cross-fade(url(/Portfolio/Rcopy/images/ribsonionrings.jpg), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-image: -webkit-cross-fade(url(/Portfolio/Rcopy/images/ribsonionrings.jpg), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+}
+.salads{
+     height: 25rem;
+     background-image: cross-fade(url(/Portfolio/Rcopy/images/salad2.jpg), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-image: -webkit-cross-fade(url(/Portfolio/Rcopy/images/salad2.jpg), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-size: cover;
+     background-position: 50%, 0;
+}
+.steaks{
+     height: 25rem;
+     background-image: cross-fade(url(/Portfolio/Rcopy/images/Beef-and-broccoli.jpg), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-image: -webkit-cross-fade(url(/Portfolio/Rcopy/images/Beef-and-broccoli.jpg), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-size: cover;
+     background-position: 50% 0;
+}
+     /* FOURTH ROW */
+.fourth-Row{
+     display: flex;
+     flex-direction: column;
+     background: rgb(95, 55, 24);
+     color: rgb(245, 222, 179);
+     padding: 4rem 0;
+}
+.fourth-Row span{
+     font-size: 1rem;
+     padding-bottom: 1rem;
+}
+.fourth-Row h2{
+     font-size: 1.5rem;
+}
+.contacts{
+     display: flex;
+     flex-direction: column;
+     padding: 2rem 0;
+}
+.fa-phone{
+     align-self: center;
+     align-content: center;
+     font-size: 2rem;
+     background: rgb(92, 23, 23);
+     border-radius: 4rem;
+     height: 4rem;
+     width: 4rem;
+     margin: 2rem 0;
+
+}
+.number:hover{
+     transform: scale(1.2);
+     text-shadow: 3px 1px .5px rgb(92, 23, 23);
+     cursor: pointer;
+}
+.contacts span{
+     display: flex;
+     justify-content: center;
+     font-size: 1.5rem;
+}
+.contacts a{
+     display: flex;
+     justify-content: center;
+     color: rgb(245, 222, 179);
+     font-size: 1.5rem;
+     text-decoration: none;
+}
+.dates{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+.dates section{
+     padding: 1rem 1rem;
+     line-height: 2rem;
+     
+}
+.dates span{
+     font-size: 1.5rem;
+}
+.video{
+     height: 20.5rem;
+     width: 25rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     align-self: center;
+     background-image: cross-fade(url(/Portfolio/Rcopy/images/BBQ-Platters.jpg), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-image: -webkit-cross-fade(url(/Portfolio/Rcopy/images/BBQ-Platters.jpg), url(/Portfolio/Rcopy/images/Black.png), 25%);
+     background-size: cover;
+     background-repeat: no-repeat;
+     border-radius: 2rem;
+}
+.fa-play{
+     align-content: center;
+     font-size: 1rem;
+     color: rgb(245, 222, 179);
+     border: 2px solid rgb(245, 222, 179);
+     border-radius: 6rem;
+     height: 3rem;
+     width: 3rem;
+}
+.fa-play:hover{
+     opacity: 50%;
+}
+     /* BOTTOM ROW */
+.bottom-Row{
+     display: flex;
+     flex-direction: column;
+     background: rgb(95, 55, 24);
+     color: rgb(245, 222, 179);
+     padding: 4rem 0;
+     border-top: 2px solid rgb(245, 222, 179);
+}
+.test{
+     font-size: 1rem;
+}
+.bottom-Row h2{
+     padding: 1rem 0;
+     font-size: 2rem;
+}
+.Customer{
+     border-radius: 10rem;
+     height: 10rem;
+     width: 10rem;
+     align-self: center;
+}
+.name{
+     padding: 2rem 0;
+     font-size: 1.5rem;
+}
+.bottom-Row .stars{
+display: flex;
+align-self: center;
+width: 6rem;
+}
+.reviews{
+     align-content: center;
+     align-self: center;
+     width: 50%;
+}
+.scroll{
+     align-self: center;
+     width: 5rem;
+}
+
+
+
+
+/******************************************
+/* RESPONSIVE
+/*******************************************/
+@media (min-width:1120px) {
+     .navbar{
+          padding: 0 2rem 0 0;
+          justify-content: space-between;
+     }
+     .navbar h1{
+          font-size: 4rem;
+          padding-left: 4rem;
+          color: rgb(245, 222, 179);
+     }
+     .menu__box{
+          visibility: visible;
+          font-size: 2rem;
+          gap: 40px;
+     }
+     .menu__box li{
+          display: flex;
+     }
+     .menu__box a{
+          text-decoration: none;
+     }
+     .toggle_btn{
+          display: none;
+     }
+     main{
+          display: flex;
+          flex-direction: column;
+          justify-items: center;
+          align-self: center;
+          background-position: right;
+          background-size: 50%;
+          align-items: flex-start;
+          background-image: cross-fade(url(/Portfolio/Rcopy/images/mainbbq.jpg), url(/Portfolio/Rcopy/images/Black.png), 0%);
+          background-image: -webkit-cross-fade(url(/Portfolio/Rcopy/images/mainbbq.jpg),url(/Portfolio/Rcopy/images/Black.png), 0%);
+     }
+     main h1{
+          font-size: 6rem;
+          width: 50%;
+          padding: 2rem 0;
+          margin: 0;
+     }
+     .info{
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 2rem 0;
+          padding-left: 12.5%
+     }
+     .search{
+          padding: 0 1rem;
+
+
+     }
+     .enter{
+          width: 30%;
+          padding: 0 1rem;
+
+     }
+     .socials{
+          padding: 0;
+          padding-left: 16%;
+     }
+     .menus ul{
+          display: flex;
+          flex-direction: row;
+          gap: 5rem;
+          padding: 2rem 2rem;
+     }
+     .fourth-Row{
+          padding: 4rem;
+     }
+     .dates{
+          flex-direction: row;
+          gap: 20rem;
+          padding: 2rem;
+     }
+     .video{
+          height: 30rem;
+          width: 45rem;
+     }
+     .fa-play{
+          font-size: 3rem;
+          height: 9rem;
+          width: 9rem;
+     }
+     
+}
+
+/******************************************
+/* ABOUT US
+/*******************************************/
+
+/******************************************
+/* ORDER
+/*******************************************/
+
+/******************************************
+/* MENU
+/*******************************************/
+
+/******************************************
+/* OPENING
+/*******************************************/
+
+/******************************************
+/* Reviews
+/*******************************************/

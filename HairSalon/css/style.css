@@ -1,0 +1,609 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body{
+     font-family: 'Cinzel', sans-serif, serif;
+     background: rgb(255, 242, 208);
+}
+/******************************************
+/* BUTTON
+/*******************************************/
+button{
+     width: fit-content;
+     padding: 1rem 1rem;
+     background: rgba(39,71,71);
+     color: rgba(255,255,255, 1);
+     border: 2px solid rgb(39, 45, 71);
+     position: relative;
+}
+button:hover{
+     transform: scale(1.05);
+     color: rgb(39,71,71);
+     background: rgb(255,255,255);
+}
+button:active{
+     background: rgba(255, 255,255,);
+     box-shadow: 0 0 5px rgb(0,0,0);
+}
+/******************************************
+/* NAV
+/*******************************************/
+nav{
+     height: 5rem;
+}
+.navbar{
+     display: none;
+     height: 2rem;
+     justify-content: space-around;
+     gap: 1rem;
+     width: 85%;
+}
+.navbar li{
+     display: flex;
+     height: 2rem;
+}
+.navbar a{
+     text-decoration: none;
+     color: rgb(39,71,71);
+     font-size: clamp(0.5rem, 0.136rem + 1.52vw, 1.5rem);
+}
+.navbar a:hover{
+     transform: scale(1.1);
+     color:rgb(128, 128, 128);
+}
+.navbar div{
+     display: flex;
+     width: 15%;
+     justify-content: space-around;
+}
+.primary-nav{
+     color: rgb(39,71,71);
+     background: rgba(255,255,255, .50);
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: space-between;
+     padding: 2rem 0;
+     position: fixed;
+     top: 0;
+     z-index: 1;
+     height: 5rem;
+     width: 100%;
+     backdrop-filter: blur(15px);
+     border-bottom: 2px solid rgb(39, 45, 71);
+}
+nav h1{
+     font-size: 2rem;
+     padding: 0 1rem 0 0;
+}
+.dropdown__menu{
+     visibility: hidden;
+     font-size: clamp(1.5rem, 0.955rem + 2.73vw, 3rem);
+     position: fixed;
+     top: 5rem;
+     left: 2rem;
+     width: 55%;
+     background: rgb(39,71,71);
+     border: 2px solid rgb(39, 45, 71);
+     backdrop-filter: blur(20px);
+     height: 0;
+     overflow: hidden;
+     opacity: 0;
+     transition: height .8s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+     opacity 1s ease-in-out, 
+     visibility 1.2s ease-in-out;
+     z-index: 1;
+}
+.dropdown__menu.open{
+     height: fit-content;
+     visibility: visible;
+     opacity: 1;
+     display: block;
+     overflow: scroll;
+} 
+.no-scroll {
+     overflow: hidden;
+   }
+   
+.dropdown__menu li{
+     display: flex;
+     padding: 1rem 1rem;
+}
+.dropdown__menu a{
+     color: rgb(255,255,255);
+     text-decoration: none;
+}
+.dropdown__menu a:hover{
+     transform: scale(1.1);
+     color:rgb(128, 128, 128);
+}
+.dropdown__menu div{
+     display: flex;
+     justify-self: center;
+     gap: 4rem;
+}
+.toggle_btn{
+     padding: 0 0 0 1rem;
+     font-size: 2rem;
+}
+/******************************************
+/* MAIN
+/*******************************************/
+.service{
+     background-image: url(/Portfolio/HairSalon/images/colorful_hair.png);
+     background-repeat: no-repeat;
+     background-size: contain;
+}
+.service h1{
+     font-size: clamp(2rem, -0.182rem + 10.91vw, 8rem);
+     padding-left: 2rem;
+     padding-top: 50%;
+
+}
+.service p{
+     font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+     padding: 1rem 0;
+     padding-left: 2rem;
+}
+.service button{
+     margin-left: 2rem;
+}
+.service aside{
+     visibility: hidden;
+}
+/******************************************
+/* 1st Visit
+/*******************************************/
+.visit{
+     color: white;
+     background: rgb(39,71,71);
+     height: 14rem;
+     display: flex;
+     flex-direction: column;
+     justify-self: center;
+     margin: 0 auto;
+     justify-content: space-evenly;
+     margin-top: 5rem;
+     padding: 0 1rem;
+     width: fit-content;
+}
+.visit > span{
+     padding: 1rem 0;
+}
+.visit span:last-child{
+     font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+     font-weight: 600;
+}
+.visit button{
+     background: rgb(255,255,255);
+     color: rgb(39,71,71)
+}
+.visit button:hover{
+     color: rgb(255,255,255);
+     background: rgb(39,71,71);
+}
+.visit button:active{
+     background: rgba(255, 255,255,);
+     box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+/******************************************
+/* COL INFO
+/*******************************************/
+.col-info{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     width: 100%;
+}
+.col-info section{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     gap: 1.5rem;
+}
+.col-info span{
+     font-weight: 600;
+}
+.col-info img{
+     height: 4rem;
+     width: 4rem;
+     margin-top: 2rem;
+}
+/******************************************
+/* DISCOUNTS
+/*******************************************/
+.Second{
+     margin: 2rem 1rem;
+     padding: 2rem 2rem;
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     text-align: center;
+     background: rgb(39,71,71);
+     color: rgb(255,255,255);
+}
+.Momentum h4{
+     font-size: clamp(1rem, -0.0714rem + 3.4286vw, 2.5rem);
+     font-weight: 600;
+     padding: 1rem 0;
+}
+.Momentum p{
+     padding: 1rem 0;
+}
+.video{
+     display: flex;
+     justify-content: center;
+     margin: 0 auto;
+     height: 20rem;
+     width: 100%;
+     background-image: url(/Portfolio/HairSalon/images/video.jpg);
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: center;
+}
+.video button{
+     height: 4rem;
+     width: 4rem;
+     border-radius: 2rem;
+     align-self: center;
+     background: rgba(255,255,255, .50);
+     color: rgb(39,71,71)
+}
+.video button:hover{
+     border: 2px solid rgb(39,71,71);
+     background: rgba(39,71,71, .5);
+}
+/******************************************
+/*STAFFS
+/*******************************************/
+.staffs{
+     padding: 0 2rem;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+}
+.staffs h2::after{
+     content: '';
+     background: rgb(39,71,71);
+     width: 100%;
+     display: flex;
+     justify-self: center;
+     height: .1rem;
+     box-shadow: 2px 2px 2px rgb(0,0,0);
+}
+.staffs h2{
+     font-size: clamp(1rem, -0.4286rem + 4.5714vw, 3rem);
+     width: 100%;
+     text-align: center;
+     padding: 2rem 0 0 0;
+}
+.staffs section{
+     justify-items: center;
+}
+
+.staffs img{
+     padding-top: 1rem;
+     width: 205px;
+}
+.staffs span{
+     color: rgba(255,255,255, 1);
+     margin: 0 auto;
+     position: relative;
+     bottom: 1.5rem;
+     display: flex;
+     align-self: center;
+     justify-content: center;
+     align-items: center;
+     height: 1.8rem;
+     width: 9.5rem;
+     background: rgb(39,71,71);
+}
+/******************************************
+/* DISCOUNTS
+/*******************************************/
+
+.discounts{
+     color: white;
+     background: rgb(39,71,71);
+     height: 14rem;
+     display: flex;
+     flex-direction: column;
+     justify-self: center;
+     justify-content: space-evenly;
+     padding: 0 1rem;
+     margin: 0 auto;
+     margin-top: 4rem;
+     width: fit-content;
+}
+.discounts > span{
+     padding: 1rem 0;
+}
+.discounts span:last-child{
+     font-size: 1.5rem;
+     font-weight: 600;
+}
+/******************************************
+/* Lookbook
+/*******************************************/
+.lookbook{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+}
+.lookbook h2::after{
+     content: '';
+     background: rgb(39,71,71);
+     width: 100%;
+     display: flex;
+     justify-self: center;
+     height: .1rem;
+     box-shadow: 2px 2px 2px rgb(0,0,0);
+}
+.lookbook h2{
+     font-size: clamp(1rem, -0.4286rem + 4.5714vw, 3rem);
+     width: 100%;
+     text-align: center;
+     padding: 2rem 0 0 0;
+}
+.gallery {
+    padding: 2rem 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(3, 20vh); /* 2 rows, each 20vh tall */
+    gap: 10px;
+    grid-template-areas:
+    "one two three"
+    "four two six"
+    "four five six";
+    height: 80vh; /* Ensure the gallery has a fixed height */
+}
+.small {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%; /* Changed to 100% to fill the grid cell */
+}
+.tall {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+}
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+
+.gallery button:hover {
+    transform: scale(1.02);
+}
+.gallery .fa-plus {
+    font-size: 4rem;
+    align-self: center;
+    align-content: center;
+    height: auto;
+    width: auto;
+}
+/******************************************
+/*MEDIA RESPONSIVE
+/*******************************************/
+
+@media (min-width:630px) and (max-width:1022px){     
+     .gallery{
+          align-self: center;
+          grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+          grid-template-rows: 10rem 9.4rem 10rem;
+          width: 65%;
+          padding: 6rem 0;
+          height: fit-content;
+     }
+     .small{
+          object-fit: cover;
+          object-position: top;
+          width: 100%;
+          height: 10rem; /* Changed to 100% to fill the grid cell */
+     }
+     .tall{
+          object-fit: cover;
+          object-position: top;
+          width:100%;
+          height: 20rem;
+     }
+}
+
+@media (min-width:1023px) {
+     .toggle_btn{
+          display: none;
+     }
+     .primary-nav{
+          backdrop-filter: blur(100px);
+     }
+     .navbar{
+          display: flex;
+     }
+     nav h1{
+          font-size: 3rem;
+          display: flex;
+          align-self: center;
+     }
+     /* MAIN */
+     .service{
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+     }
+     .service h1{
+          padding-top: 50%;
+          padding-left: 4rem;
+     }
+     .service p{
+          font-size: 1.5rem;
+          padding-left:4rem ;
+     }
+     .service button{
+          margin-left: 4rem;
+          font-size: 1.5rem;
+     }
+     /* 1st Visit */
+     .visit{
+          font-size: 1.5rem;
+          margin: 0 0 0 4rem;
+          justify-self: flex-start;
+          height: 20rem;
+          width: fit-content;
+          margin-top: 3rem;
+          margin-bottom: 5rem;
+     }
+     .visit span:last-child{
+          font-size: 2rem;
+     }
+     .visit button{
+          font-size: 1.5rem;
+     } 
+     /* COL INFO */
+     .col-info {
+          flex-direction: row;
+          justify-content: space-evenly;
+     }
+     .col-info span{
+          font-size: 1.5rem;
+     }
+     .col-info p{
+          display: flex;
+          justify-content: center;
+          width: 25rem;
+     }
+     .col-info img{
+          height: 6rem;
+          width: 6rem;
+     }
+     /* SECOND */
+     .Second{
+          display: flex;
+          flex-direction: row;
+          justify-self: center;
+          background: rgb(39,71,71);
+          color: rgb(255,255,255);
+          width: 75%;
+          margin: 6rem 0;
+     }
+     .Momentum{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+     }
+     .Momentum p{
+          width: 50%;
+          padding: 2rem 0;
+     }
+     .Momentum button{
+          margin-bottom: 3rem;
+          background: rgb(255,255,255);
+          color: rgb(39,71,71);
+     }
+     .Momentum button:hover{
+          color: rgb(255,255,255);
+          background: rgb(39,71,71);
+     }
+     .Momentum button:active{
+          box-shadow: 0 0 5px rgb(255,255,255);
+     }
+     /* STAFFS */
+     .staffs{
+          justify-content: space-evenly;
+     }
+     .staffs h2{
+          padding: 4rem 0;
+     }
+     .staffs img{
+          width: 20rem;
+     }
+     .staffs span{
+          bottom: 2.5rem;
+          height: 2.5rem;
+          width: 16rem;
+          font-size:1.5rem;
+     }
+     /* DISCOUNTS */
+     .discounts{
+          height: 20rem;
+          width: 25rem;
+     }
+     .discounts > span{
+          font-size: 1.5rem;
+     }
+     .discounts p{
+          font-size: 1.5rem;
+     }
+     .discounts span:last-child{
+          font-size: 2rem;
+     }
+     .discounts button{
+          margin-bottom: 3rem;
+          background: rgb(255,255,255);
+          color: rgb(39,71,71);
+     }
+     .discounts button:hover{
+          color: rgb(255,255,255);
+          background: rgb(39,71,71);
+     }
+     .discounts button:active{
+          box-shadow: 0 0 5px rgb(255,255,255);
+     }
+     .gallery{
+          align-self: center;
+          grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+          grid-template-rows: repeat(3, 25rem); /* 2 
+          height: 100vh; */
+          width: 50%;
+          padding: 6rem 0;
+          height: fit-content;
+     }
+     .small{
+          object-fit: cover;
+          object-position: top;
+          width: 100%;
+          height: 25rem; /* Changed to 100% to fill the grid cell */
+     }
+     .tall{
+          object-fit: cover;
+          object-position: top;
+          width:100%;
+          height: 100%;
+     }
+     .gallery .fa-plus{
+          font-size: 4rem;
+          align-self: center;
+          align-content: center;
+          height: auto;
+          width: 10rem;
+     }
+}
