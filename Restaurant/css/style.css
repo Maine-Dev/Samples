@@ -135,8 +135,8 @@ main{
      background: rgb(92, 23, 23);
      color:rgb(245, 222, 179);
      padding: 2rem 0;
-     background-image: cross-fade(url(Restaurant/images/mainbbq.jpg), url(Restaurant/images/Black.png), 65%);
-     background-image: -webkit-cross-fade(url(Restaurant/images/mainbbq.jpg),url(Restaurant/images/Black.png), 65%);
+     background-image: cross-fade(url(/Restaurant/images/mainbbq.jpg), url(/Restaurant/images/Black.png), 65%);
+     background-image: -webkit-cross-fade(url(/Restaurant/images/mainbbq.jpg),url(/Restaurant/images/Black.png), 65%);
      background-size: cover;
      background-repeat: no-repeat;
      border-bottom:2px solid rgb(245, 222, 179);
