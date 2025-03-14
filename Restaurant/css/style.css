@@ -142,6 +142,9 @@ main{
      border-bottom:2px solid rgb(245, 222, 179);
 }
 main h1{
+	background-image: url(/images/mainbbq.jpg)
+	background-image: url(./images/mainbbq.jpg)
+	background-image: url(../images/mainbbq.jpg)
      font-size: 3rem;
      width: 75%;
      margin: 0 auto;
